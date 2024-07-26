@@ -9,8 +9,7 @@ export interface IRegistration{
 }
 
 class RegistrationServices {
-
-    route = '/Registration'
-    postData = () => axios.post('/Registration');
+    route = `${process.env.REACT_APP_API_URL}/Registration`
+    postData = (params:IRegistration) => axios.post(`${this.route}`,params);
 }
 export default new RegistrationServices();
