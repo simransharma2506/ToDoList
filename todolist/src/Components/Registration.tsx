@@ -4,9 +4,7 @@ import React from "react";
 import RegistrationServices from "../Services/RegistrationServices";
 
 const Registration = () =>{
-    
     const [isSignup,setIsSignup] = React.useState(false);
-
     return(
         <>
             <Formik 
@@ -42,6 +40,7 @@ const Registration = () =>{
                                              placeholder="Email Address"
                                              onChange={(e,value)=>{ setValues({...values,email:value})}}/>
                                             <TextField placeholder="Password" onChange={(e,value)=>{setValues({...values,password:value})}}/>
+                                            <label style={{padding: 0,margin:2, fontSize: 12,color: '#0078D4'}}>Forgot password</label>
                                             <div style={{ display:'flex', justifyContent:'center'}}>
                                                 <PrimaryButton text="Login" onClick={() => handleSubmit()}/>
                                             </div>
