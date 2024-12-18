@@ -1,5 +1,5 @@
 import { Formik, FormikProps } from "formik";
-import { PrimaryButton, Stack, TextField } from "@fluentui/react";
+import { Link, PrimaryButton, Stack, TextField } from "@fluentui/react";
 import React from "react";
 import RegistrationServices from "../Services/RegistrationServices";
 
@@ -42,9 +42,11 @@ const Registration = () =>{
                                              placeholder="Email Address"
                                              onChange={(e,value)=>{ setValues({...values,email:value})}}/>
                                             <TextField placeholder="Password" onChange={(e,value)=>{setValues({...values,password:value})}}/>
+                                            <label style={{ fontSize: 10, margin: 10, color: '#0078D4'}}>Forgot password</label>
                                             <div style={{ display:'flex', justifyContent:'center'}}>
                                                 <PrimaryButton text="Login" onClick={() => handleSubmit()}/>
                                             </div>
+                                            <label>Not a member?<Link>Signup now</Link></label>
                                         </Stack>
                                     </>
                                 )}
