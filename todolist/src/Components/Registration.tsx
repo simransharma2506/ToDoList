@@ -4,7 +4,9 @@ import React from "react";
 import RegistrationServices from "../Services/RegistrationServices";
 
 const Registration = () =>{
+    
     const [isSignup,setIsSignup] = React.useState(false);
+
     return(
         <>
             <Formik 
